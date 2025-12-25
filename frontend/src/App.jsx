@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Blogs from './pages/Blogs.jsx';
 import Abouts from './pages/Abouts.jsx';
@@ -7,7 +7,7 @@ import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import Navbar from './components/Navbar.jsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <><Navbar /><Home /></>
