@@ -7,8 +7,12 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+const allowedOrigins = [
+  "http://localhost:5173/mern-project-news/#/",       // local frontend
+  "https://sachinyadavsk.github.io/mern-project-news/#/"    // live frontend
+];
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:allowedOrigins,
     credentials:true    
 }))
 app.use("/api/v1/user", userRouter);

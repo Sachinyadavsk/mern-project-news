@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const logoutHandle = async (e) => {
     try {
-      const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true })
+      const res = await axios.get('https://mern-project-news-backend.onrender.com/api/v1/user/logout', { withCredentials: true })
       if (res.data.success) {
         navigate('/')
         dispatch(setUser(null));
